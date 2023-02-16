@@ -23,6 +23,8 @@ strChoice = "" # A Capture the user option selection
 # -- Processing -- #
 # Step 1 - When the program starts, load any data you have
 # in a text file called ToDoList.txt into a python list of dictionaries rows (like Lab 5-2)
+objFile = open(ToDoFile, "a")#Here we create the text file if it does not exist
+objFile.close()
 objFile = open(ToDoFile, "r")#Here we import the text file data and convert to the list table
 for row in objFile:
     lstRow = row.split(",")
